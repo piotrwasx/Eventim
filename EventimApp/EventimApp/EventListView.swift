@@ -27,7 +27,7 @@ struct EventListView: View {
                                 }
                             })
                     }
-                        .font(.title)
+                    .font(.title)
                     
                     NavigationLink(
                         destination: BasketView(),
@@ -38,8 +38,8 @@ struct EventListView: View {
                             }
                         })
                 }
-                    .navigationTitle("Dostępne bilety")
-
+                .navigationTitle("Dostępne bilety")
+                
             }
         }
     }

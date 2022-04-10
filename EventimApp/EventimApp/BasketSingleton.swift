@@ -12,14 +12,14 @@ class BasketSingleton {
     // create a singleton
     static let basket = BasketSingleton()
     
-    var items = [Event]()
+    var items = [Ticket]()
 
     // create a private initializer
     private init() {
     }
 
     func showBasket() -> String {
-        var bskt = "=======\n"
+        var bskt = ""
         for item in items {
             bskt += item.toString()
             bskt += "\n=======\n"
@@ -31,8 +31,8 @@ class BasketSingleton {
         return items.count
     }
     
-    func addToBasket(e: Event) {
-        items.append(e)
+    func addToBasket(t: Ticket) {
+        items.append(t)
     }
     
     func clearBasket() {
