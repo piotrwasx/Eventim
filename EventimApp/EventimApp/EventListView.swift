@@ -12,12 +12,11 @@ struct EventListView: View {
     var body: some View {
         VStack {
             HeaderView()
-                .frame(height: 100)
+                .frame(height: 120)
             
             NavigationView {
                 
                 VStack {
-                    
                     List(events, id: \.id) { event in
                         NavigationLink(
                             destination: EventView(event: event),
@@ -34,13 +33,15 @@ struct EventListView: View {
                         label: {
                             VStack {
                                 Text("Przejedź do koszyka")
-                                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                    .font(.title)
                             }
+                            
                         })
+                    
                 }
                 .navigationTitle("Dostępne bilety")
-                
             }
+            Spacer()
         }
     }
     

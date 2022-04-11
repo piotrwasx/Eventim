@@ -10,25 +10,22 @@ import SwiftUI
 struct BasketView: View {
 
     var body: some View {
+        HeaderBasketView()
+            .frame(height: 50)
+            .padding(.top, -20)
         ScrollView {
             VStack {
-                Text("Koszyk")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    .bold()
-                    .padding(.top, -20)
-                
                 Text("\(BasketSingleton.basket.showBasket())")
-                    .font(.system(size: 15, weight: .medium, design: .default))
+                    .font(.system(size: 18, weight: .medium, design: .default))
                     .foregroundColor(.black)
+                    .frame(width: 370)
                 
                 Spacer()
-                
-                Button("Oproznij koszyk", action: {
-                    BasketSingleton.basket.clearBasket()
-                }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                
             }
         }
+        Button("Oproznij koszyk", action: {
+            BasketSingleton.basket.clearBasket()
+        }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
     }
 }
 

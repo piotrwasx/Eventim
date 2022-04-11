@@ -10,8 +10,9 @@ import SwiftUI
 struct HeaderView: View {
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .opacity(0.7)
             
             VStack {
                 VStack{
@@ -23,7 +24,7 @@ struct HeaderView: View {
                         .font(.system(size: 15, weight: .medium, design: .default))
                         .foregroundColor(.white)
                         .padding(.top,-20)
-                        .padding(.leading, 150)
+                        .padding(.leading, -109)
                 }
             }
         }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct EventView: View {
     var event: Event
@@ -15,19 +16,30 @@ struct EventView: View {
     var body: some View {
         VStack {
             Text(event.name)
-                .font(.title)
+                .font(.system(size: 42))
                 .fontWeight(.bold)
-            Text(event.date).font(.body)
-            Text(event.type).font(.body)
-            Text("\(event.price) zł").font(.body)
+            Text(event.date)
+                .font(.system(size: 24))
+                .fontWeight(.heavy)
+            Text(event.type)
+                .font(.system(size: 24))
+                .fontWeight(.light)
+            Text("\(String(format: "%.2f",(event.price))) zł")
+                .font(.body)
+                .fontWeight(.medium)
             Spacer()
+            
+            let count = BasketSingleton.basket.makeIterator().countTickets(s: event.name)
+            
+            Text("Ilość w koszyku: \(count)")
+                .font(.system(size: 18, weight: .medium, design: .default))
             
             if event.type == "Spektakl" {
                 Button("Dodaj do koszyka", action: {
                     BasketSingleton.basket.items.append(theatre.createTicket(name: event.name, type: event.type, date: event.date, price: event.price))
                 }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             }
-            else if event.type == "Koncert" {
+            else {
                 Button("Dodaj do koszyka", action: {
                     BasketSingleton.basket.items.append(concert.createTicket(name: event.name, type: event.type, date: event.date, price: event.price))
                 }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)

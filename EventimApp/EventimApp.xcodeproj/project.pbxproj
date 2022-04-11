@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1239FDBE2803297D006E1444 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDBD2803297D006E1444 /* HeaderView.swift */; };
+		1239FDC0280429CF006E1444 /* HeaderBasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDBF280429CF006E1444 /* HeaderBasketView.swift */; };
+		1239FDC628045EFD006E1444 /* EventAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC528045EFD006E1444 /* EventAdapter.swift */; };
+		1239FDC828048A94006E1444 /* Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC728048A94006E1444 /* Iterator.swift */; };
 		1245DAFB27E8FC8900F78F0A /* EventimAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1245DAFA27E8FC8900F78F0A /* EventimAppApp.swift */; };
 		1245DAFD27E8FC8900F78F0A /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1245DAFC27E8FC8900F78F0A /* EventListView.swift */; };
 		1245DAFF27E8FC8A00F78F0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1245DAFE27E8FC8A00F78F0A /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		1239FDBD2803297D006E1444 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		1239FDBF280429CF006E1444 /* HeaderBasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBasketView.swift; sourceTree = "<group>"; };
+		1239FDC528045EFD006E1444 /* EventAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAdapter.swift; sourceTree = "<group>"; };
+		1239FDC728048A94006E1444 /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
 		1245DAF727E8FC8900F78F0A /* EventimApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventimApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1245DAFA27E8FC8900F78F0A /* EventimAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventimAppApp.swift; sourceTree = "<group>"; };
 		1245DAFC27E8FC8900F78F0A /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				1239FDBD2803297D006E1444 /* HeaderView.swift */,
+				1239FDBF280429CF006E1444 /* HeaderBasketView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -126,6 +133,8 @@
 				1245DAFE27E8FC8A00F78F0A /* Assets.xcassets */,
 				1245DB0327E8FC8A00F78F0A /* Info.plist */,
 				1245DB0027E8FC8A00F78F0A /* Preview Content */,
+				1239FDC528045EFD006E1444 /* EventAdapter.swift */,
+				1239FDC728048A94006E1444 /* Iterator.swift */,
 			);
 			path = EventimApp;
 			sourceTree = "<group>";
@@ -291,7 +300,10 @@
 				1245DAFD27E8FC8900F78F0A /* EventListView.swift in Sources */,
 				1245DAFB27E8FC8900F78F0A /* EventimAppApp.swift in Sources */,
 				1245DB3027E9D33100F78F0A /* BasketView.swift in Sources */,
+				1239FDC828048A94006E1444 /* Iterator.swift in Sources */,
+				1239FDC0280429CF006E1444 /* HeaderBasketView.swift in Sources */,
 				1245DB2827E9077700F78F0A /* Event.swift in Sources */,
+				1239FDC628045EFD006E1444 /* EventAdapter.swift in Sources */,
 				1239FDBE2803297D006E1444 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

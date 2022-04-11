@@ -7,17 +7,16 @@
 
 import Foundation
 
-class BasketSingleton {
-
-    // create a singleton
+class BasketSingleton: Iterable {
+    
+    
     static let basket = BasketSingleton()
     
     var items = [Ticket]()
-
-    // create a private initializer
+    
     private init() {
     }
-
+    
     func showBasket() -> String {
         var bskt = ""
         for item in items {
@@ -27,10 +26,6 @@ class BasketSingleton {
         return bskt
     }
     
-    func countBasket() -> Int {
-        return items.count
-    }
-    
     func addToBasket(t: Ticket) {
         items.append(t)
     }
@@ -38,4 +33,9 @@ class BasketSingleton {
     func clearBasket() {
         items.removeAll()
     }
+    
+    func makeIterator() -> TicketIterator {
+        return ArrayTicketIterator(self.items)
+    }
+    
 }
