@@ -23,7 +23,7 @@ struct BasketView: View {
                 Spacer()
             }
         }
-        Button("Oproznij koszyk", action: {
+        Button("Opróżnij koszyk", action: {
             BasketSingleton.basket.clearBasket()
         }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
     }

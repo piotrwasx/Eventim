@@ -15,18 +15,26 @@ struct EventView: View {
     
     var body: some View {
         VStack {
-            Text(event.name)
-                .font(.system(size: 42))
-                .fontWeight(.bold)
-            Text(event.date)
-                .font(.system(size: 24))
-                .fontWeight(.heavy)
-            Text(event.type)
-                .font(.system(size: 24))
-                .fontWeight(.light)
-            Text("\(String(format: "%.2f",(event.price))) zł")
-                .font(.body)
-                .fontWeight(.medium)
+            
+            Image(defImage(e: event))
+                .resizable()
+                .scaledToFit()
+                .frame(height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            
+            VStack(alignment: .leading){
+                Text(event.name)
+                    .font(.system(size: 42))
+                    .fontWeight(.heavy)
+                Text(event.date)
+                    .font(.system(size: 28))
+                    .fontWeight(.bold)
+                Text(event.type)
+                    .font(.system(size: 26))
+                    .fontWeight(.light)
+                Text("\(String(format: "%.2f",(event.price))) zł")
+                    .font(.system(size: 15))
+            }
             Spacer()
             
             let count = BasketSingleton.basket.makeIterator().countTickets(s: event.name)
@@ -45,6 +53,16 @@ struct EventView: View {
                 }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             }
         }
+    }
+    
+    func defImage(e: Event) -> String {
+        if e.type == "Koncert"{
+            return "concert"
+        }
+        else if e.type == "Spektakl" {
+            return "theatre"
+        }
+        return "none"
     }
     
     struct TicketView_Previews: PreviewProvider {

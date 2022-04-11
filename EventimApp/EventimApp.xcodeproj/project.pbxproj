@@ -11,6 +11,7 @@
 		1239FDC0280429CF006E1444 /* HeaderBasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDBF280429CF006E1444 /* HeaderBasketView.swift */; };
 		1239FDC628045EFD006E1444 /* EventAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC528045EFD006E1444 /* EventAdapter.swift */; };
 		1239FDC828048A94006E1444 /* Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC728048A94006E1444 /* Iterator.swift */; };
+		1239FDCA2804B43D006E1444 /* TampleMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC92804B43D006E1444 /* TampleMethod.swift */; };
 		1245DAFB27E8FC8900F78F0A /* EventimAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1245DAFA27E8FC8900F78F0A /* EventimAppApp.swift */; };
 		1245DAFD27E8FC8900F78F0A /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1245DAFC27E8FC8900F78F0A /* EventListView.swift */; };
 		1245DAFF27E8FC8A00F78F0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1245DAFE27E8FC8A00F78F0A /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		1239FDBF280429CF006E1444 /* HeaderBasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBasketView.swift; sourceTree = "<group>"; };
 		1239FDC528045EFD006E1444 /* EventAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAdapter.swift; sourceTree = "<group>"; };
 		1239FDC728048A94006E1444 /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
+		1239FDC92804B43D006E1444 /* TampleMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TampleMethod.swift; sourceTree = "<group>"; };
 		1245DAF727E8FC8900F78F0A /* EventimApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventimApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1245DAFA27E8FC8900F78F0A /* EventimAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventimAppApp.swift; sourceTree = "<group>"; };
 		1245DAFC27E8FC8900F78F0A /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				1245DB0027E8FC8A00F78F0A /* Preview Content */,
 				1239FDC528045EFD006E1444 /* EventAdapter.swift */,
 				1239FDC728048A94006E1444 /* Iterator.swift */,
+				1239FDC92804B43D006E1444 /* TampleMethod.swift */,
 			);
 			path = EventimApp;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				1245DB2627E905BE00F78F0A /* EventView.swift in Sources */,
 				1245DAFD27E8FC8900F78F0A /* EventListView.swift in Sources */,
 				1245DAFB27E8FC8900F78F0A /* EventimAppApp.swift in Sources */,
+				1239FDCA2804B43D006E1444 /* TampleMethod.swift in Sources */,
 				1245DB3027E9D33100F78F0A /* BasketView.swift in Sources */,
 				1239FDC828048A94006E1444 /* Iterator.swift in Sources */,
 				1239FDC0280429CF006E1444 /* HeaderBasketView.swift in Sources */,
