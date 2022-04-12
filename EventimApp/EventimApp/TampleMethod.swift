@@ -43,3 +43,17 @@ class ShowTheatre: TampleMethod {
     }
     
 }
+
+class ShowAll: TampleMethod {
+    var events: [Event] = EventList.someEvents
+    var type = ""
+    
+    init(events: [Event]) {
+        self.events = events
+    }
+    
+    func filter() -> [Event] {
+        return events
+    }
+    
+}

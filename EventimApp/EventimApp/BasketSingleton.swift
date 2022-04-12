@@ -25,6 +25,9 @@ class BasketSingleton: Iterable {
         }
         return bskt
     }
+    func returnAll() -> [Ticket]{
+        return items
+    }
     
     func addToBasket(t: Ticket) {
         items.append(t)
@@ -32,6 +35,14 @@ class BasketSingleton: Iterable {
     
     func clearBasket() {
         items.removeAll()
+    }
+    
+    func countPrice() -> Float {
+        var sum: Float = 0
+        for item in items {
+            sum += item.price
+        }
+        return sum
     }
     
     func makeIterator() -> TicketIterator {

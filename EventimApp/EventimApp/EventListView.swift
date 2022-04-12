@@ -8,30 +8,21 @@
 import SwiftUI
 
 struct EventListView: View {
-    var events: [Event] = EventList.someEvents
+    @State var a: [Event] = ShowAll(events: EventList.someEvents).filter()
     var concertEvents = ShowConcert(events: EventList.someEvents)
     var theatreEvents = ShowTheatre(events: EventList.someEvents)
-    @State var a: [Event] = []
-    
+
     var body: some View {
         VStack {
             HeaderView()
                 .frame(height: 120)
             
-            HStack() {
-                Button("Koncerty", action: {
-                    a = concertEvents.filter()
-                }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                
-                Button("Spektakle", action: {
-                    a = theatreEvents.filter()
-                }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-            }
-            
             NavigationView {
                 
                 VStack {
-                    List(a, id: \.id) { event in
+
+                    List(a, id: \.id) {
+                        event in
                         NavigationLink(
                             destination: EventView(event: event),
                             label: {
@@ -42,19 +33,46 @@ struct EventListView: View {
                     }
                     .font(.title)
                     
+                    HStack() {
+                        Button("Koncerty", action: {
+                            a = concertEvents.filter()
+                        })
+                        
+                        Button("Spektakle", action: {
+                            a = theatreEvents.filter()
+                        })
+                        
+                        Button("Wszystko", action: {
+                            a = ShowAll(events: EventList.someEvents).filter()
+                        })
+                    }.font(.system(size: 22))
+                    
+                    Divider()
+                    
+                    VStack{
+                        NavigationLink(
+                            destination: MyTicketsView(),
+                            label: {
+                                Text("Moje Bilety")
+                            })
+                    }.font(.system(size: 22))
+                    
+                    Divider()
+                    
                     NavigationLink(
                         destination: BasketView(),
                         label: {
                             VStack {
                                 Text("Przejedź do koszyka")
-                                    .font(.title)
-                            }
+                                    .font(.system(size: 25))
+                            }.padding(.top, 25)
                             
                         })
                     
                 }
-                .navigationTitle("Dostępne bilety")
+                .navigationBarTitle("Dostępne bilety")
             }
+            
             Spacer()
         }
     }

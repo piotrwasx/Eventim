@@ -12,6 +12,9 @@
 		1239FDC628045EFD006E1444 /* EventAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC528045EFD006E1444 /* EventAdapter.swift */; };
 		1239FDC828048A94006E1444 /* Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC728048A94006E1444 /* Iterator.swift */; };
 		1239FDCA2804B43D006E1444 /* TampleMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC92804B43D006E1444 /* TampleMethod.swift */; };
+		1239FDCE28057243006E1444 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDCD28057243006E1444 /* Facade.swift */; };
+		1239FDD0280572FD006E1444 /* MyTickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDCF280572FC006E1444 /* MyTickets.swift */; };
+		1239FDD228057377006E1444 /* MyTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDD128057377006E1444 /* MyTicketsView.swift */; };
 		1245DAFB27E8FC8900F78F0A /* EventimAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1245DAFA27E8FC8900F78F0A /* EventimAppApp.swift */; };
 		1245DAFD27E8FC8900F78F0A /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1245DAFC27E8FC8900F78F0A /* EventListView.swift */; };
 		1245DAFF27E8FC8A00F78F0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1245DAFE27E8FC8A00F78F0A /* Assets.xcassets */; };
@@ -48,6 +51,9 @@
 		1239FDC528045EFD006E1444 /* EventAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAdapter.swift; sourceTree = "<group>"; };
 		1239FDC728048A94006E1444 /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
 		1239FDC92804B43D006E1444 /* TampleMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TampleMethod.swift; sourceTree = "<group>"; };
+		1239FDCD28057243006E1444 /* Facade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
+		1239FDCF280572FC006E1444 /* MyTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTickets.swift; sourceTree = "<group>"; };
+		1239FDD128057377006E1444 /* MyTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsView.swift; sourceTree = "<group>"; };
 		1245DAF727E8FC8900F78F0A /* EventimApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventimApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1245DAFA27E8FC8900F78F0A /* EventimAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventimAppApp.swift; sourceTree = "<group>"; };
 		1245DAFC27E8FC8900F78F0A /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
@@ -138,6 +144,9 @@
 				1239FDC528045EFD006E1444 /* EventAdapter.swift */,
 				1239FDC728048A94006E1444 /* Iterator.swift */,
 				1239FDC92804B43D006E1444 /* TampleMethod.swift */,
+				1239FDCD28057243006E1444 /* Facade.swift */,
+				1239FDCF280572FC006E1444 /* MyTickets.swift */,
+				1239FDD128057377006E1444 /* MyTicketsView.swift */,
 			);
 			path = EventimApp;
 			sourceTree = "<group>";
@@ -298,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1245DB2C27E92F1800F78F0A /* BasketSingleton.swift in Sources */,
+				1239FDD228057377006E1444 /* MyTicketsView.swift in Sources */,
 				1245DB2E27E9357F00F78F0A /* Ticket.swift in Sources */,
 				1245DB2627E905BE00F78F0A /* EventView.swift in Sources */,
 				1245DAFD27E8FC8900F78F0A /* EventListView.swift in Sources */,
@@ -308,7 +318,9 @@
 				1239FDC0280429CF006E1444 /* HeaderBasketView.swift in Sources */,
 				1245DB2827E9077700F78F0A /* Event.swift in Sources */,
 				1239FDC628045EFD006E1444 /* EventAdapter.swift in Sources */,
+				1239FDCE28057243006E1444 /* Facade.swift in Sources */,
 				1239FDBE2803297D006E1444 /* HeaderView.swift in Sources */,
+				1239FDD0280572FD006E1444 /* MyTickets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

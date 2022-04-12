@@ -15,7 +15,7 @@ struct BasketView: View {
             .padding(.top, -20)
         ScrollView {
             VStack {
-                Text("\(BasketSingleton.basket.showBasket())")
+                Text(" \(BasketSingleton.basket.showBasket())")
                     .font(.system(size: 18, weight: .medium, design: .default))
                     .foregroundColor(.black)
                     .frame(width: 370)
@@ -23,6 +23,21 @@ struct BasketView: View {
                 Spacer()
             }
         }
+        
+        Text("Suma: \(String(format: "%.2f",BasketSingleton.basket.countPrice())) zł")
+            .font(.system(size: 18, weight: .medium, design: .default))
+            .foregroundColor(.black)
+            
+        Spacer()
+        
+        Button("Kup", action: {
+            let tA = MyTickets.TicketsArray
+            let facade = Facade(myTickets: tA)
+            
+            facade.Procedure()
+            
+        }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+        
         Button("Opróżnij koszyk", action: {
             BasketSingleton.basket.clearBasket()
         }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
