@@ -15,7 +15,7 @@ struct BasketView: View {
             .padding(.top, -20)
         ScrollView {
             VStack {
-                Text(" \(BasketSingleton.basket.showBasket())")
+                Text("\(BasketSingleton.basket.showBasket())")
                     .font(.system(size: 18, weight: .medium, design: .default))
                     .foregroundColor(.black)
                     .frame(width: 370)

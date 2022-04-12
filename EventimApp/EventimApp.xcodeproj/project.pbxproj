@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1239FDBE2803297D006E1444 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDBD2803297D006E1444 /* HeaderView.swift */; };
 		1239FDC0280429CF006E1444 /* HeaderBasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDBF280429CF006E1444 /* HeaderBasketView.swift */; };
-		1239FDC628045EFD006E1444 /* EventAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC528045EFD006E1444 /* EventAdapter.swift */; };
+		1239FDC628045EFD006E1444 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC528045EFD006E1444 /* Adapter.swift */; };
 		1239FDC828048A94006E1444 /* Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC728048A94006E1444 /* Iterator.swift */; };
 		1239FDCA2804B43D006E1444 /* TampleMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC92804B43D006E1444 /* TampleMethod.swift */; };
 		1239FDCE28057243006E1444 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDCD28057243006E1444 /* Facade.swift */; };
@@ -48,7 +48,7 @@
 /* Begin PBXFileReference section */
 		1239FDBD2803297D006E1444 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		1239FDBF280429CF006E1444 /* HeaderBasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBasketView.swift; sourceTree = "<group>"; };
-		1239FDC528045EFD006E1444 /* EventAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAdapter.swift; sourceTree = "<group>"; };
+		1239FDC528045EFD006E1444 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		1239FDC728048A94006E1444 /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
 		1239FDC92804B43D006E1444 /* TampleMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TampleMethod.swift; sourceTree = "<group>"; };
 		1239FDCD28057243006E1444 /* Facade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 				1245DAFE27E8FC8A00F78F0A /* Assets.xcassets */,
 				1245DB0327E8FC8A00F78F0A /* Info.plist */,
 				1245DB0027E8FC8A00F78F0A /* Preview Content */,
-				1239FDC528045EFD006E1444 /* EventAdapter.swift */,
+				1239FDC528045EFD006E1444 /* Adapter.swift */,
 				1239FDC728048A94006E1444 /* Iterator.swift */,
 				1239FDC92804B43D006E1444 /* TampleMethod.swift */,
 				1239FDCD28057243006E1444 /* Facade.swift */,
@@ -317,7 +317,7 @@
 				1239FDC828048A94006E1444 /* Iterator.swift in Sources */,
 				1239FDC0280429CF006E1444 /* HeaderBasketView.swift in Sources */,
 				1245DB2827E9077700F78F0A /* Event.swift in Sources */,
-				1239FDC628045EFD006E1444 /* EventAdapter.swift in Sources */,
+				1239FDC628045EFD006E1444 /* Adapter.swift in Sources */,
 				1239FDCE28057243006E1444 /* Facade.swift in Sources */,
 				1239FDBE2803297D006E1444 /* HeaderView.swift in Sources */,
 				1239FDD0280572FD006E1444 /* MyTickets.swift in Sources */,

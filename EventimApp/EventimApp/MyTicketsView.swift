@@ -9,9 +9,12 @@ import SwiftUI
 
 struct MyTicketsView: View {
     var body: some View {
+        
+        let adaptee = Adaptee()
         ScrollView {
             VStack {
-                Text("\(MyTickets.myTickets.toString())")
+                //Text("\(MyTickets.myTickets.toString())")
+                Text("\(Adapter(adaptee).method())")
                     .font(.system(size: 18, weight: .medium, design: .default))
                     .foregroundColor(.black)
                     .frame(width: 370)
