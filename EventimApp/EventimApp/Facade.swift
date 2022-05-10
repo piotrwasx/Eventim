@@ -9,7 +9,7 @@ import Foundation
 
 class Facade {
     var myTickets: [Ticket]
-    
+    var realmManager = RealmManager()
     init(myTickets: [Ticket]) {
         self.myTickets = myTickets
     }
@@ -23,9 +23,9 @@ class Facade {
         let basket = BasketSingleton.basket.returnAll()
         if basket.count != 0 {
             for ticket in basket {
-                MyTickets.TicketsArray.append(ticket)
+                realmManager.addTicket(ticket: ticket)
+                //MyTickets.TicketsArray.append(ticket)
             }
-            BasketSingleton.basket.clearBasket()
         }
     }
 }

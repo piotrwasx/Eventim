@@ -7,12 +7,11 @@
 
 import Foundation
 
-
 protocol TicketFactory {
     func createTicket(name: String, type: String, date: String, price: Float) -> Ticket
 }
 
-class Ticket {
+class Ticket: Identifiable {
     var name: String
     var type: String
     var date: String

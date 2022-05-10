@@ -12,6 +12,7 @@ struct EventView: View {
     var event: Event
     let theatre = TheatreTicketFactory()
     let concert = ConcertTicketFactory()
+    @StateObject var basket = BasketSingleton.basket
     
     var body: some View {
         VStack {
@@ -37,19 +38,19 @@ struct EventView: View {
             }
             Spacer()
             
-            let count = BasketSingleton.basket.makeIterator().countTickets(s: event.name)
+            let count = basket.makeIterator().countTickets(s: event.name)
             
             Text("Ilość w koszyku: \(count)")
                 .font(.system(size: 18, weight: .medium, design: .default))
             
             if event.type == "Spektakl" {
                 Button("Dodaj do koszyka", action: {
-                    BasketSingleton.basket.items.append(theatre.createTicket(name: event.name, type: event.type, date: event.date, price: event.price))
+                    basket.items.append(theatre.createTicket(name: event.name, type: event.type, date: event.date, price: event.price))
                 }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             }
             else {
                 Button("Dodaj do koszyka", action: {
-                    BasketSingleton.basket.items.append(concert.createTicket(name: event.name, type: event.type, date: event.date, price: event.price))
+                    basket.items.append(concert.createTicket(name: event.name, type: event.type, date: event.date, price: event.price))
                 }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             }
         }
@@ -68,6 +69,7 @@ struct EventView: View {
     struct TicketView_Previews: PreviewProvider {
         static var previews: some View {
             EventView(event: EventList.someEvents.first!)
+                .environmentObject(BasketSingleton.basket)
         }
     }
 }

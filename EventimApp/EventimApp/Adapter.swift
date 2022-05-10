@@ -14,9 +14,10 @@ class Target {
 }
 
 class Adaptee {
+    var realmManager = RealmManager()
     func prettyPrint() -> String {
         var output: String = ""
-        for ticket in MyTickets.TicketsArray {
+        for ticket in realmManager.tickets {
             output += "nazwa: \(ticket.name)\ndata: \(ticket.date)\ntyp: \(ticket.type)\ncena: \(ticket.price) \n\n"
         }
         return output
@@ -25,13 +26,14 @@ class Adaptee {
 
 class Adapter: Target {
     private var adaptee: Adaptee
-
+    var realmManager = RealmManager()
+    
     init(_ adaptee: Adaptee) {
         self.adaptee = adaptee
     }
     
     override func method() -> String {
-        if MyTickets.TicketsArray.count == 0 {
+        if realmManager.tickets.count == 0 {
             let t = Target()
             return t.method()
         }

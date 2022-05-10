@@ -9,9 +9,12 @@ import SwiftUI
 
 struct EventListView: View {
     @State var a: [Event] = ShowAll(events: EventList.someEvents).filter()
+    
     var concertEvents = ShowConcert(events: EventList.someEvents)
+    
     var theatreEvents = ShowTheatre(events: EventList.someEvents)
-
+    
+    
     var body: some View {
         VStack {
             HeaderView()
@@ -20,7 +23,7 @@ struct EventListView: View {
             NavigationView {
                 
                 VStack {
-
+                    
                     List(a, id: \.id) {
                         event in
                         NavigationLink(

@@ -6,13 +6,18 @@
 //
 
 import Foundation
+import SwiftUI
 
-class BasketSingleton: Iterable {
+//protocol Basket {
+//    var items: [Ticket] { get }
+//}
+
+class BasketSingleton: Iterable, ObservableObject {
     
     
     static let basket = BasketSingleton()
     
-    var items = [Ticket]()
+    @Published var items = [Ticket]()
     
     private init() {
     }

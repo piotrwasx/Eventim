@@ -9,22 +9,25 @@ import SwiftUI
 
 struct BasketView: View {
 
+    @StateObject var basket = BasketSingleton.basket
+    
     var body: some View {
         HeaderBasketView()
             .frame(height: 50)
             .padding(.top, -20)
-        ScrollView {
-            VStack {
-                Text("\(BasketSingleton.basket.showBasket())")
-                    .font(.system(size: 18, weight: .medium, design: .default))
-                    .foregroundColor(.black)
-                    .frame(width: 370)
-                
-                Spacer()
+        
+        List {
+            ForEach(basket.returnAll()) {
+                item in
+                    TicketRow(ticket: item.name, typeOfEvent: item.type)
             }
         }
+        .onAppear {
+            UITableView.appearance().backgroundColor = UIColor.clear
+        }
         
-        Text("Suma: \(String(format: "%.2f",BasketSingleton.basket.countPrice())) zł")
+        
+        Text("Suma: \(String(format: "%.2f",basket.countPrice())) zł")
             .font(.system(size: 18, weight: .medium, design: .default))
             .foregroundColor(.black)
             
@@ -39,7 +42,7 @@ struct BasketView: View {
         }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
         
         Button("Opróżnij koszyk", action: {
-            BasketSingleton.basket.clearBasket()
+            basket.clearBasket()
         }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
     }
 }
@@ -47,5 +50,6 @@ struct BasketView: View {
 struct BasketView_Previews: PreviewProvider {
     static var previews: some View {
         BasketView()
+            .environmentObject(BasketSingleton.basket)
     }
 }

@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121E88142828264400FF420C /* EventsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E88132828264400FF420C /* EventsViewModelTests.swift */; };
+		121E8817282826B600FF420C /* TicketsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E8816282826B600FF420C /* TicketsProviderMock.swift */; };
+		121E88192828271400FF420C /* BasketMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E88182828271400FF420C /* BasketMock.swift */; };
+		121E881C2829211700FF420C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 121E881B2829211700FF420C /* Realm */; };
+		121E881E2829211700FF420C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 121E881D2829211700FF420C /* RealmSwift */; };
+		121E882028295D3B00FF420C /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E881F28295D3B00FF420C /* RealmManager.swift */; };
+		121E882228299A4800FF420C /* TicketSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E882128299A4800FF420C /* TicketSchema.swift */; };
+		121E88262829AD7A00FF420C /* TicketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E88252829AD7A00FF420C /* TicketRow.swift */; };
 		1239FDBE2803297D006E1444 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDBD2803297D006E1444 /* HeaderView.swift */; };
 		1239FDC0280429CF006E1444 /* HeaderBasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDBF280429CF006E1444 /* HeaderBasketView.swift */; };
 		1239FDC628045EFD006E1444 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239FDC528045EFD006E1444 /* Adapter.swift */; };
@@ -46,6 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		121E88132828264400FF420C /* EventsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModelTests.swift; sourceTree = "<group>"; };
+		121E8816282826B600FF420C /* TicketsProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsProviderMock.swift; sourceTree = "<group>"; };
+		121E88182828271400FF420C /* BasketMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketMock.swift; sourceTree = "<group>"; };
+		121E881F28295D3B00FF420C /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		121E882128299A4800FF420C /* TicketSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketSchema.swift; sourceTree = "<group>"; };
+		121E88252829AD7A00FF420C /* TicketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRow.swift; sourceTree = "<group>"; };
 		1239FDBD2803297D006E1444 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		1239FDBF280429CF006E1444 /* HeaderBasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBasketView.swift; sourceTree = "<group>"; };
 		1239FDC528045EFD006E1444 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
@@ -78,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				121E881E2829211700FF420C /* RealmSwift in Frameworks */,
+				121E881C2829211700FF420C /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,11 +114,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1204C322282A4C64002B799A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1239FDD128057377006E1444 /* MyTicketsView.swift */,
+				1245DAFC27E8FC8900F78F0A /* EventListView.swift */,
+				1245DB2527E905BE00F78F0A /* EventView.swift */,
+				1245DB2F27E9D33100F78F0A /* BasketView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		121E8815282826AC00FF420C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				121E8816282826B600FF420C /* TicketsProviderMock.swift */,
+				121E88182828271400FF420C /* BasketMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		1239FDBC2803296B006E1444 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				1239FDBD2803297D006E1444 /* HeaderView.swift */,
 				1239FDBF280429CF006E1444 /* HeaderBasketView.swift */,
+				121E88252829AD7A00FF420C /* TicketRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -130,13 +167,12 @@
 		1245DAF927E8FC8900F78F0A /* EventimApp */ = {
 			isa = PBXGroup;
 			children = (
-				1245DB2F27E9D33100F78F0A /* BasketView.swift */,
+				1204C322282A4C64002B799A /* Views */,
+				121E882128299A4800FF420C /* TicketSchema.swift */,
 				1245DB2D27E9357F00F78F0A /* Ticket.swift */,
 				1245DB2B27E92F1800F78F0A /* BasketSingleton.swift */,
 				1245DB2727E9077700F78F0A /* Event.swift */,
-				1245DB2527E905BE00F78F0A /* EventView.swift */,
 				1245DAFA27E8FC8900F78F0A /* EventimAppApp.swift */,
-				1245DAFC27E8FC8900F78F0A /* EventListView.swift */,
 				1239FDBC2803296B006E1444 /* Components */,
 				1245DAFE27E8FC8A00F78F0A /* Assets.xcassets */,
 				1245DB0327E8FC8A00F78F0A /* Info.plist */,
@@ -146,7 +182,7 @@
 				1239FDC92804B43D006E1444 /* TampleMethod.swift */,
 				1239FDCD28057243006E1444 /* Facade.swift */,
 				1239FDCF280572FC006E1444 /* MyTickets.swift */,
-				1239FDD128057377006E1444 /* MyTicketsView.swift */,
+				121E881F28295D3B00FF420C /* RealmManager.swift */,
 			);
 			path = EventimApp;
 			sourceTree = "<group>";
@@ -163,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				1245DB0C27E8FC8A00F78F0A /* EventimAppTests.swift */,
+				121E8815282826AC00FF420C /* Mocks */,
+				121E88132828264400FF420C /* EventsViewModelTests.swift */,
 				1245DB0E27E8FC8A00F78F0A /* Info.plist */,
 			);
 			path = EventimAppTests;
@@ -193,6 +231,10 @@
 			dependencies = (
 			);
 			name = EventimApp;
+			packageProductDependencies = (
+				121E881B2829211700FF420C /* Realm */,
+				121E881D2829211700FF420C /* RealmSwift */,
+			);
 			productName = EventimApp;
 			productReference = 1245DAF727E8FC8900F78F0A /* EventimApp.app */;
 			productType = "com.apple.product-type.application";
@@ -264,6 +306,9 @@
 				Base,
 			);
 			mainGroup = 1245DAEE27E8FC8900F78F0A;
+			packageReferences = (
+				121E881A2829211700FF420C /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 1245DAF827E8FC8900F78F0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,8 +355,11 @@
 				1239FDD228057377006E1444 /* MyTicketsView.swift in Sources */,
 				1245DB2E27E9357F00F78F0A /* Ticket.swift in Sources */,
 				1245DB2627E905BE00F78F0A /* EventView.swift in Sources */,
+				121E882028295D3B00FF420C /* RealmManager.swift in Sources */,
+				121E882228299A4800FF420C /* TicketSchema.swift in Sources */,
 				1245DAFD27E8FC8900F78F0A /* EventListView.swift in Sources */,
 				1245DAFB27E8FC8900F78F0A /* EventimAppApp.swift in Sources */,
+				121E88262829AD7A00FF420C /* TicketRow.swift in Sources */,
 				1239FDCA2804B43D006E1444 /* TampleMethod.swift in Sources */,
 				1245DB3027E9D33100F78F0A /* BasketView.swift in Sources */,
 				1239FDC828048A94006E1444 /* Iterator.swift in Sources */,
@@ -328,7 +376,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				121E8817282826B600FF420C /* TicketsProviderMock.swift in Sources */,
 				1245DB0D27E8FC8A00F78F0A /* EventimAppTests.swift in Sources */,
+				121E88142828264400FF420C /* EventsViewModelTests.swift in Sources */,
+				121E88192828271400FF420C /* BasketMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +685,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		121E881A2829211700FF420C /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		121E881B2829211700FF420C /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 121E881A2829211700FF420C /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		121E881D2829211700FF420C /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 121E881A2829211700FF420C /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1245DAEF27E8FC8900F78F0A /* Project object */;
 }
