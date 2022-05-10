@@ -73,7 +73,12 @@ struct EventListView: View {
                         })
                     
                 }
+                .onAppear {
+                    UITableView.appearance().backgroundColor = UIColor.clear
+                    UITableViewCell.appearance().backgroundColor = UIColor.clear
+                }
                 .navigationBarTitle("Dostępne bilety")
+                
             }
             
             Spacer()

@@ -16,12 +16,22 @@ struct EventView: View {
     
     var body: some View {
         VStack {
-            
-            Image(defImage(e: event))
-                .resizable()
-                .scaledToFit()
-                .frame(height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            ZStack{
+                Image(defImage(e: event))
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                
+                if basket.makeIterator().countTickets(s: event.name) > -1 {
+                    
+                    QunatityView(event: event.name, basket: basket)
+                        .environmentObject(basket)
+                        .position(x: 270, y: 60)
+                    
+                }
+            }
+            .frame(width: 370, height: 250, alignment: .center)
             
             VStack(alignment: .leading){
                 Text(event.name)
@@ -37,11 +47,6 @@ struct EventView: View {
                     .font(.system(size: 15))
             }
             Spacer()
-            
-            let count = basket.makeIterator().countTickets(s: event.name)
-            
-            Text("Ilość w koszyku: \(count)")
-                .font(.system(size: 18, weight: .medium, design: .default))
             
             if event.type == "Spektakl" {
                 Button("Dodaj do koszyka", action: {
@@ -68,7 +73,7 @@ struct EventView: View {
     
     struct TicketView_Previews: PreviewProvider {
         static var previews: some View {
-            EventView(event: EventList.someEvents.first!)
+            EventView(event: EventList.someEvents[3])
                 .environmentObject(BasketSingleton.basket)
         }
     }

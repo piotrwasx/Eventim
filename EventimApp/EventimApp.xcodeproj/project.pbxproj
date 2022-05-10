@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1204C324282A9B8F002B799A /* QunatityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1204C323282A9B8F002B799A /* QunatityView.swift */; };
 		121E88142828264400FF420C /* EventsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E88132828264400FF420C /* EventsViewModelTests.swift */; };
 		121E8817282826B600FF420C /* TicketsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E8816282826B600FF420C /* TicketsProviderMock.swift */; };
 		121E88192828271400FF420C /* BasketMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E88182828271400FF420C /* BasketMock.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1204C323282A9B8F002B799A /* QunatityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QunatityView.swift; sourceTree = "<group>"; };
 		121E88132828264400FF420C /* EventsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModelTests.swift; sourceTree = "<group>"; };
 		121E8816282826B600FF420C /* TicketsProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsProviderMock.swift; sourceTree = "<group>"; };
 		121E88182828271400FF420C /* BasketMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketMock.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				1239FDBD2803297D006E1444 /* HeaderView.swift */,
+				1204C323282A9B8F002B799A /* QunatityView.swift */,
 				1239FDBF280429CF006E1444 /* HeaderBasketView.swift */,
 				121E88252829AD7A00FF420C /* TicketRow.swift */,
 			);
@@ -359,6 +362,7 @@
 				121E882228299A4800FF420C /* TicketSchema.swift in Sources */,
 				1245DAFD27E8FC8900F78F0A /* EventListView.swift in Sources */,
 				1245DAFB27E8FC8900F78F0A /* EventimAppApp.swift in Sources */,
+				1204C324282A9B8F002B799A /* QunatityView.swift in Sources */,
 				121E88262829AD7A00FF420C /* TicketRow.swift in Sources */,
 				1239FDCA2804B43D006E1444 /* TampleMethod.swift in Sources */,
 				1245DB3027E9D33100F78F0A /* BasketView.swift in Sources */,
