@@ -10,6 +10,7 @@ import SwiftUI
 struct BasketView: View {
 
     @StateObject var basket = BasketSingleton.basket
+    @StateObject private var viewModel = BasketViewModel()
     
     var body: some View {
         HeaderBasketView()
@@ -34,15 +35,11 @@ struct BasketView: View {
         Spacer()
         
         Button("Kup", action: {
-            let tA = MyTickets.TicketsArray
-            let facade = Facade(myTickets: tA)
-            
-            facade.Procedure()
-            
+            viewModel.buy()
         }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
         
         Button("Opróżnij koszyk", action: {
-            basket.clearBasket()
+            viewModel.clearBasket(basket: basket)
         }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
     }
 }

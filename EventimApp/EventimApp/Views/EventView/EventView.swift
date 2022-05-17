@@ -10,21 +10,19 @@ import Foundation
 
 struct EventView: View {
     var event: Event
-    let theatre = TheatreTicketFactory()
-    let concert = ConcertTicketFactory()
-    @StateObject var basket = BasketSingleton.basket
+    @StateObject private var basket = BasketSingleton.basket
+    @StateObject private var viewModel = EventViewModel()
     
     var body: some View {
         VStack {
             ZStack{
-                Image(defImage(e: event))
+                Image(viewModel.defImage(e: event))
                     .resizable()
                     .scaledToFit()
                     .frame(height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                 
-                if basket.makeIterator().countTickets(s: event.name) > -1 {
-                    
+                if viewModel.checkIfAnyInBasket(basket: basket, event: event) == true {
                     QunatityView(event: event.name, basket: basket)
                         .environmentObject(basket)
                         .position(x: 270, y: 60)
@@ -48,29 +46,13 @@ struct EventView: View {
             }
             Spacer()
             
-            if event.type == "Spektakl" {
-                Button("Dodaj do koszyka", action: {
-                    basket.items.append(theatre.createTicket(name: event.name, type: event.type, date: event.date, price: event.price))
-                }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-            }
-            else {
-                Button("Dodaj do koszyka", action: {
-                    basket.items.append(concert.createTicket(name: event.name, type: event.type, date: event.date, price: event.price))
-                }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-            }
+            Button("Dodaj do koszyka", action: {
+                viewModel.addToBasket(basket: basket, event: event)
+            }).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
         }
     }
     
-    func defImage(e: Event) -> String {
-        if e.type == "Koncert"{
-            return "concert"
-        }
-        else if e.type == "Spektakl" {
-            return "theatre"
-        }
-        return "none"
-    }
-    
+        
     struct TicketView_Previews: PreviewProvider {
         static var previews: some View {
             EventView(event: EventList.someEvents[3])

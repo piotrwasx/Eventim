@@ -11,9 +11,7 @@ struct MyTicketsView: View {
     @StateObject var realmManager = RealmManager()
     var body: some View {
         
-        //let adaptee = Adaptee()
             VStack {
-                
                 List {
                     ForEach(realmManager.tickets) {
                         item in

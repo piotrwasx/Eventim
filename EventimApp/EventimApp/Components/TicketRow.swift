@@ -43,6 +43,6 @@ struct TicketRow: View {
 
 struct TicketRow_Previews: PreviewProvider {
     static var previews: some View {
-        TicketRow(ticket: "Blabla", typeOfEvent: "Koncert")
+        TicketRow(ticket: "Lorem Ipsum", typeOfEvent: "Koncert")
     }
 }

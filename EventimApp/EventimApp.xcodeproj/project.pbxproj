@@ -35,6 +35,8 @@
 		1245DB2C27E92F1800F78F0A /* BasketSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1245DB2B27E92F1800F78F0A /* BasketSingleton.swift */; };
 		1245DB2E27E9357F00F78F0A /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1245DB2D27E9357F00F78F0A /* Ticket.swift */; };
 		1245DB3027E9D33100F78F0A /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1245DB2F27E9D33100F78F0A /* BasketView.swift */; };
+		12B2CF6B2833B7FB006E481E /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B2CF6A2833B7FB006E481E /* EventViewModel.swift */; };
+		12B2CF702833C43C006E481E /* BasketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B2CF6F2833C43C006E481E /* BasketViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		1245DB2B27E92F1800F78F0A /* BasketSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketSingleton.swift; sourceTree = "<group>"; };
 		1245DB2D27E9357F00F78F0A /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		1245DB2F27E9D33100F78F0A /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		12B2CF6A2833B7FB006E481E /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		12B2CF6F2833C43C006E481E /* BasketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +123,9 @@
 		1204C322282A4C64002B799A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1239FDD128057377006E1444 /* MyTicketsView.swift */,
-				1245DAFC27E8FC8900F78F0A /* EventListView.swift */,
-				1245DB2527E905BE00F78F0A /* EventView.swift */,
-				1245DB2F27E9D33100F78F0A /* BasketView.swift */,
+				12B2CF6E2833B826006E481E /* BasketView */,
+				12B2CF6D2833B80E006E481E /* EventListView */,
+				12B2CF692833B7CE006E481E /* EventView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 		1239FDBC2803296B006E1444 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1239FDD128057377006E1444 /* MyTicketsView.swift */,
 				1239FDBD2803297D006E1444 /* HeaderView.swift */,
 				1204C323282A9B8F002B799A /* QunatityView.swift */,
 				1239FDBF280429CF006E1444 /* HeaderBasketView.swift */,
@@ -170,22 +174,12 @@
 		1245DAF927E8FC8900F78F0A /* EventimApp */ = {
 			isa = PBXGroup;
 			children = (
+				12B2CF682833B725006E481E /* Utilities */,
 				1204C322282A4C64002B799A /* Views */,
-				121E882128299A4800FF420C /* TicketSchema.swift */,
-				1245DB2D27E9357F00F78F0A /* Ticket.swift */,
-				1245DB2B27E92F1800F78F0A /* BasketSingleton.swift */,
-				1245DB2727E9077700F78F0A /* Event.swift */,
-				1245DAFA27E8FC8900F78F0A /* EventimAppApp.swift */,
 				1239FDBC2803296B006E1444 /* Components */,
 				1245DAFE27E8FC8A00F78F0A /* Assets.xcassets */,
 				1245DB0327E8FC8A00F78F0A /* Info.plist */,
 				1245DB0027E8FC8A00F78F0A /* Preview Content */,
-				1239FDC528045EFD006E1444 /* Adapter.swift */,
-				1239FDC728048A94006E1444 /* Iterator.swift */,
-				1239FDC92804B43D006E1444 /* TampleMethod.swift */,
-				1239FDCD28057243006E1444 /* Facade.swift */,
-				1239FDCF280572FC006E1444 /* MyTickets.swift */,
-				121E881F28295D3B00FF420C /* RealmManager.swift */,
 			);
 			path = EventimApp;
 			sourceTree = "<group>";
@@ -216,6 +210,50 @@
 				1245DB1927E8FC8A00F78F0A /* Info.plist */,
 			);
 			path = EventimAppUITests;
+			sourceTree = "<group>";
+		};
+		12B2CF682833B725006E481E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				121E882128299A4800FF420C /* TicketSchema.swift */,
+				1245DB2D27E9357F00F78F0A /* Ticket.swift */,
+				1245DB2B27E92F1800F78F0A /* BasketSingleton.swift */,
+				1245DB2727E9077700F78F0A /* Event.swift */,
+				1245DAFA27E8FC8900F78F0A /* EventimAppApp.swift */,
+				1239FDC528045EFD006E1444 /* Adapter.swift */,
+				1239FDC728048A94006E1444 /* Iterator.swift */,
+				1239FDCD28057243006E1444 /* Facade.swift */,
+				1239FDCF280572FC006E1444 /* MyTickets.swift */,
+				121E881F28295D3B00FF420C /* RealmManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		12B2CF692833B7CE006E481E /* EventView */ = {
+			isa = PBXGroup;
+			children = (
+				1245DB2527E905BE00F78F0A /* EventView.swift */,
+				12B2CF6A2833B7FB006E481E /* EventViewModel.swift */,
+			);
+			path = EventView;
+			sourceTree = "<group>";
+		};
+		12B2CF6D2833B80E006E481E /* EventListView */ = {
+			isa = PBXGroup;
+			children = (
+				1239FDC92804B43D006E1444 /* TampleMethod.swift */,
+				1245DAFC27E8FC8900F78F0A /* EventListView.swift */,
+			);
+			path = EventListView;
+			sourceTree = "<group>";
+		};
+		12B2CF6E2833B826006E481E /* BasketView */ = {
+			isa = PBXGroup;
+			children = (
+				1245DB2F27E9D33100F78F0A /* BasketView.swift */,
+				12B2CF6F2833C43C006E481E /* BasketViewModel.swift */,
+			);
+			path = BasketView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,12 +399,14 @@
 				121E882028295D3B00FF420C /* RealmManager.swift in Sources */,
 				121E882228299A4800FF420C /* TicketSchema.swift in Sources */,
 				1245DAFD27E8FC8900F78F0A /* EventListView.swift in Sources */,
+				12B2CF702833C43C006E481E /* BasketViewModel.swift in Sources */,
 				1245DAFB27E8FC8900F78F0A /* EventimAppApp.swift in Sources */,
 				1204C324282A9B8F002B799A /* QunatityView.swift in Sources */,
 				121E88262829AD7A00FF420C /* TicketRow.swift in Sources */,
 				1239FDCA2804B43D006E1444 /* TampleMethod.swift in Sources */,
 				1245DB3027E9D33100F78F0A /* BasketView.swift in Sources */,
 				1239FDC828048A94006E1444 /* Iterator.swift in Sources */,
+				12B2CF6B2833B7FB006E481E /* EventViewModel.swift in Sources */,
 				1239FDC0280429CF006E1444 /* HeaderBasketView.swift in Sources */,
 				1245DB2827E9077700F78F0A /* Event.swift in Sources */,
 				1239FDC628045EFD006E1444 /* Adapter.swift in Sources */,
