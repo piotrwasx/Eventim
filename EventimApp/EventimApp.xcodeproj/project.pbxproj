@@ -123,6 +123,7 @@
 		1204C322282A4C64002B799A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12B2CF712833CEA5006E481E /* MyTicketsView */,
 				12B2CF6E2833B826006E481E /* BasketView */,
 				12B2CF6D2833B80E006E481E /* EventListView */,
 				12B2CF692833B7CE006E481E /* EventView */,
@@ -142,7 +143,6 @@
 		1239FDBC2803296B006E1444 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				1239FDD128057377006E1444 /* MyTicketsView.swift */,
 				1239FDBD2803297D006E1444 /* HeaderView.swift */,
 				1204C323282A9B8F002B799A /* QunatityView.swift */,
 				1239FDBF280429CF006E1444 /* HeaderBasketView.swift */,
@@ -254,6 +254,14 @@
 				12B2CF6F2833C43C006E481E /* BasketViewModel.swift */,
 			);
 			path = BasketView;
+			sourceTree = "<group>";
+		};
+		12B2CF712833CEA5006E481E /* MyTicketsView */ = {
+			isa = PBXGroup;
+			children = (
+				1239FDD128057377006E1444 /* MyTicketsView.swift */,
+			);
+			path = MyTicketsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
